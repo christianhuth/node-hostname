@@ -1,3 +1,10 @@
 ingress:
   enabled: true
-  hostname: hostname.127.0.0.1.nip.io
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  className: nginx
+  hostname: hostname.christianhuth.de
+  tls:
+    - secretName: hostname.christianhuth.de-tls
+      hosts:
+        - hostname.christianhuth.de
