@@ -53,7 +53,7 @@
           "type": "string"
         },
         "tag": {
-          "default": "0.0.1",
+          "default": "0.0.2",
           "description": "Overrides the image tag",
           "required": [],
           "title": "tag",
@@ -210,7 +210,85 @@
     },
     "securityContext": {
       "description": "container-level security context",
-      "required": [],
+      "properties": {
+        "allowPrivilegeEscalation": {
+          "default": false,
+          "required": [],
+          "title": "allowPrivilegeEscalation",
+          "type": "boolean"
+        },
+        "capabilities": {
+          "properties": {
+            "drop": {
+              "items": {
+                "anyOf": [
+                  {
+                    "required": [],
+                    "type": "string"
+                  }
+                ],
+                "required": []
+              },
+              "required": [],
+              "title": "drop",
+              "type": "array"
+            }
+          },
+          "required": [
+            "drop"
+          ],
+          "title": "capabilities",
+          "type": "object"
+        },
+        "privileged": {
+          "default": false,
+          "required": [],
+          "title": "privileged",
+          "type": "boolean"
+        },
+        "runAsGroup": {
+          "default": 1001,
+          "required": [],
+          "title": "runAsGroup",
+          "type": "integer"
+        },
+        "runAsNonRoot": {
+          "default": true,
+          "required": [],
+          "title": "runAsNonRoot",
+          "type": "boolean"
+        },
+        "runAsUser": {
+          "default": 1001,
+          "required": [],
+          "title": "runAsUser",
+          "type": "integer"
+        },
+        "seccompProfile": {
+          "properties": {
+            "type": {
+              "default": "RuntimeDefault",
+              "required": [],
+              "title": "type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "title": "seccompProfile",
+          "type": "object"
+        }
+      },
+      "required": [
+        "allowPrivilegeEscalation",
+        "capabilities",
+        "privileged",
+        "runAsGroup",
+        "runAsNonRoot",
+        "runAsUser",
+        "seccompProfile"
+      ],
       "title": "securityContext",
       "type": "object"
     },

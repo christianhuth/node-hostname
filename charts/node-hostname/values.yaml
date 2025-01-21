@@ -12,7 +12,7 @@ image:
   # -- image pull policy
   pullPolicy: Always
   # -- Overrides the image tag
-  tag: "0.0.1"
+  tag: "0.0.2"
 
 # -- If defined, uses a Secret to pull an image from a private Docker registry or repository.
 imagePullSecrets: []
@@ -47,13 +47,18 @@ resources:
   #   memory: 128Mi
 
 # -- container-level security context
-securityContext: {}
-  # capabilities:nodeSelector:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+# @default -- see [values.yaml](./values.yaml)
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+      - ALL
+  privileged: false
+  runAsGroup: 1001
+  runAsNonRoot: true
+  runAsUser: 1001
+  seccompProfile:
+    type: RuntimeDefault
 
 service:
   # -- Kubernetes service type

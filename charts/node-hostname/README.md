@@ -52,7 +52,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | image.pullPolicy | string | `"Always"` | image pull policy |
 | image.registry | string | `"docker.io"` | image registory |
 | image.repository | string | `"christianhuth/node-hostname"` | image repository |
-| image.tag | string | `"0.0.1"` | Overrides the image tag |
+| image.tag | string | `"0.0.2"` | Overrides the image tag |
 | imagePullSecrets | list | `[]` | If defined, uses a Secret to pull an image from a private Docker registry or repository. |
 | ingress.annotations | object | `{}` | Additional annotations for the Ingress resource |
 | ingress.className | string | `""` | IngressClass that will be be used to implement the Ingress |
@@ -67,7 +67,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | replicaCount | int | `1` | Number of replicas |
 | resources | object | `{"requests":{"cpu":"100m","memory":"100Mi"}}` | Resource limits and requests for the controller pods. |
 | revisionHistoryLimit | int | `0` | The number of old ReplicaSets to retain |
-| securityContext | object | `{}` | container-level security context |
+| securityContext | object | see [values.yaml](./values.yaml) | container-level security context |
 | service.port | int | `3000` | Kubernetes port where service is exposed |
 | service.type | string | `"ClusterIP"` | Kubernetes service type |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |

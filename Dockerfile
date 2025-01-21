@@ -4,16 +4,22 @@ FROM node:18
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+# Change ownership of the working directory
+RUN chown -R node:node /app
+
+# Copy the Node.js application to the working directory
+COPY --chown=node:node package*.json ./
+COPY --chown=node:node ./app.js ./app.js
+COPY --chown=node:node ./bin ./bin
+COPY --chown=node:node ./routes ./routes
+
+# Switch to node user
+USER node
 
 # Install the application dependencies
 RUN npm install
 
-# Copy the rest of the application code to the working directory
-COPY . .
-
-# Expose the port the app runs on
+# Add metadata where the application runs on
 EXPOSE 3000
 
 # Define the command to run the application
