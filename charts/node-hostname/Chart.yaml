@@ -14,6 +14,3 @@ annotations:
   artifacthub.io/changes: |
     - kind: added
       description: Initial Version
-  artifacthub.io/signKey: |
-    fingerprint: EE24F8BB6D099E78FD704F83B5ECDBCDDD485D0E
-    url: https://christianhuth.github.io/node-hostname/public.key
