@@ -2,20 +2,24 @@ apiVersion: v2
 name: node-hostname
 description: Dummy application to test container infrastructures
 type: application
-version: 0.0.3
-appVersion: "0.0.1"
+version: 0.0.4
+appVersion: "0.0.2"
 home: https://github.com/christianhuth/node-hostname
 maintainers:
   - name: christianhuth
     email: christian@knell.it
 sources:
-  - https://github.com/cristiklein/node-hostname
+  - https://github.com/christianhuth/node-hostname
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: removed unrequired Prerequisites
+      description: source for Helm Chart
+    - kind: changed
+      description: image version to 0.0.2
     - kind: added
-      description: signing key
+      description: default values for the security context of the container
+    - kind: fixed
+      description: bug when defining PodSecurityContext
   artifacthub.io/signKey: |
     fingerprint: CEA47F2BBF1C00E8D6B890C2279E585587E9BFFC
     url: https://christianhuth.github.io/node-hostname/public.key
