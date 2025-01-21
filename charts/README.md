@@ -24,9 +24,9 @@ You can then run `helm search repo node-hostname` to see the current list of ava
 
 ## List of available Charts
 
-| Chart name                              | Image source                                                                 | Description                                                                                            |
-|-----------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [node-hostname](./charts/node-hostname) | [christianhuth/node-hostname](https://docker.io/christianhuth/node-hostname) | [Dummy application to test container infrastructures](https://github.com/christianhuth/node-hostname) |
+| Chart name                              | Image source                                                                        | Description                                                                                           |
+|-----------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| [node-hostname](./charts/node-hostname) | [christianhuth/node-hostname](https://hub.docker.com/r/christianhuth/node-hostname) | [Dummy application to test container infrastructures](https://github.com/christianhuth/node-hostname) |
 
 ## Development
 
