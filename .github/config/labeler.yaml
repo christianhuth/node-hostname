@@ -3,6 +3,7 @@ ci-cd:
 - changed-files:
   - any-glob-to-any-file: '.github/config/*'
   - any-glob-to-any-file: '.github/workflows/*'
+
 helm:
 - changed-files:
   - any-glob-to-any-file: 'charts/*'

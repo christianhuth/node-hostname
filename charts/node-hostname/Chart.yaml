@@ -2,7 +2,7 @@ apiVersion: v2
 name: node-hostname
 description: Dummy application to test container infrastructures
 type: application
-version: 0.0.2
+version: 0.0.3
 appVersion: "0.0.1"
 home: https://github.com/christianhuth/node-hostname
 maintainers:
