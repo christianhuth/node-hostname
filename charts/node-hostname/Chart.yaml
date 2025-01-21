@@ -14,3 +14,8 @@ annotations:
   artifacthub.io/changes: |
     - kind: changed
       description: removed unrequired Prerequisites
+    - kind: added
+      description: signing key
+  artifacthub.io/signKey: |
+    fingerprint: CEA47F2BBF1C00E8D6B890C2279E585587E9BFFC
+    url: https://christianhuth.github.io/node-hostname/public.key

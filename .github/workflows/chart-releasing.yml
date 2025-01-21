@@ -2,6 +2,13 @@ name: Chart-Releasing
 
 on:
   workflow_call:
+    secrets:
+      GPG_PRIVATE_KEY_BASE64:
+        required: true
+      GPG_PRIVATE_KEY_PASSPHRASE:
+        required: true
+      GPG_PRIVATE_KEY_UID:
+        required: true
   workflow_dispatch:
 
 jobs:
@@ -20,7 +27,16 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      - name: Import GPG key
+        run: |
+          echo "${{ secrets.GPG_PRIVATE_KEY_BASE64 }}" | base64 -d | gpg --dearmor --output keyring.gpg
+          echo "${{ secrets.GPG_PRIVATE_KEY_PASSPHRASE }}" > passphrase-file.txt
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_KEY: "${{ secrets.GPG_PRIVATE_KEY_UID }}"
+          CR_KEYRING: keyring.gpg
+          CR_PASSPHRASE_FILE: passphrase-file.txt
+          CR_SIGN: true
