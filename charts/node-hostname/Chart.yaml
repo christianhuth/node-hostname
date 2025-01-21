@@ -2,7 +2,7 @@ apiVersion: v2
 name: node-hostname
 description: Dummy application to test container infrastructures
 type: application
-version: 0.0.1
+version: 0.0.2
 appVersion: "0.0.1"
 home: https://github.com/christianhuth/node-hostname
 maintainers:
@@ -12,5 +12,5 @@ sources:
   - https://github.com/cristiklein/node-hostname
 annotations:
   artifacthub.io/changes: |
-    - kind: added
-      description: Initial Version
+    - kind: changed
+      description: removed unrequired Prerequisites

@@ -1,9 +1,8 @@
-name: Release Charts
+name: Chart-Releasing
 
 on:
-  push:
-    branches: [main]
-    paths: ["charts/**"]
+  workflow_call:
+  workflow_dispatch:
 
 jobs:
   release:
