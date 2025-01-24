@@ -2,8 +2,8 @@ apiVersion: v2
 name: node-hostname
 description: Dummy application to test container infrastructures
 type: application
-version: 1.0.0
-appVersion: "1.0.0"
+version: 1.0.1
+appVersion: "1.0.1"
 home: https://github.com/christianhuth/node-hostname
 maintainers:
   - name: christianhuth
@@ -13,7 +13,7 @@ sources:
 annotations:
   artifacthub.io/changes: |
     - kind: changed
-      description: image version to 1.0.0
+      description: image version to 1.0.1
   artifacthub.io/signKey: |
     fingerprint: CEA47F2BBF1C00E8D6B890C2279E585587E9BFFC
     url: https://christianhuth.github.io/node-hostname/public.key
