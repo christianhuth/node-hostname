@@ -4,6 +4,29 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: image version to 1.0.1
+      artifacthub.io/signKey: |
+        fingerprint: CEA47F2BBF1C00E8D6B890C2279E585587E9BFFC
+        url: https://christianhuth.github.io/node-hostname/public.key
+    apiVersion: v2
+    appVersion: 1.0.1
+    created: "2025-01-24T13:00:01.906189941Z"
+    description: Dummy application to test container infrastructures
+    digest: 5a0ccafdea6d45997e6277a6ed12e2449f3d88ae3eddac211af837ec7e156f55
+    home: https://github.com/christianhuth/node-hostname
+    maintainers:
+    - email: christian@knell.it
+      name: christianhuth
+    name: node-hostname
+    sources:
+    - https://github.com/christianhuth/node-hostname
+    type: application
+    urls:
+    - https://github.com/christianhuth/node-hostname/releases/download/node-hostname-1.0.1/node-hostname-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: image version to 1.0.0
       artifacthub.io/signKey: |
         fingerprint: CEA47F2BBF1C00E8D6B890C2279E585587E9BFFC
@@ -98,4 +121,4 @@ entries:
     urls:
     - https://github.com/christianhuth/node-hostname/releases/download/node-hostname-0.0.1/node-hostname-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-21T11:44:28.815664686Z"
+generated: "2025-01-24T13:00:01.906209418Z"
